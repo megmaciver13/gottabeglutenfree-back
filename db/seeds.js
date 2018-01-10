@@ -59,7 +59,68 @@ And it was such a nice day that I decided to make a picnic of it. My friends Sar
   directions: [blackBeanBurgerDirections]
 })
 
-let posts = [blackBeanBurgerPost]
+let savoryQuinoaWrapDirections = new DirectionList({
+  stepOne: {
+    text: `First, if you haven’t cooked the quinoa yet, do so now. I made 1 cup of dry quinoa, so I could use the rest for meals throughout the week. Rinse 1 c. dry quinoa, then place in 2 c. water. Bring to a boil. Once boiling, turn the heat low, and place the top on the pan. Let it cook for 15 min. Once the quinoa is cooked, use a fork to fluff it up and separate the grains.`,
+    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-1.jpg'
+  },
+  stepTwo: {
+    text: 'Heat the tortilla on a skillet over low heat.',
+    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-2.jpg'
+  },
+  stepThree: {
+    text: 'Let it heat for about 30 seconds on one side, then turn it over and line with cheese. Let cook until cheese is melted.',
+    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-5.jpg'
+  },
+  stepFour: {
+    text: 'While the cheese is melting, chop up the parsley and sun-dried tomatoes.',
+    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-4.jpg'
+  },
+  stepFive: {
+    text: 'Once the cheese on the tortilla has melted, turn off the heat and pile on the sun-dried tomatoes and parsley.',
+    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-6.jpg'
+  },
+  stepSix: {
+    text: 'Line up the avocado slices.',
+    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-7.jpg'
+  },
+  stepSeven: {
+    text: `Then, spoon the warm quinoa onto the tortilla, and plop on a handful of greens. Roll it up carefully, as the tortilla is probably a little crispy from the skillet. Between that and the green, the wrap has a nice crunch to it!`,
+    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-1.jpg'
+  }
+})
+
+let savoryQuinoaWrapPost = new Post({
+  title: 'Savory Quinoa Wrap',
+  date: new Date('2014-06-20T16:00:00Z'),
+  featuredImage: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-10.jpg',
+  introText: `So my latest obsession has been sun-dried tomatoes.
+
+Since I picked up a jar at Trader Joe’s two weeks ago, I’ve been sneaking them into almost all of my food. And you know what I’ve found? They actually work quite well in pretty much all of my meals. I guess that may be due to the fact that my other recent diet staples have been cheese and kale. In case you weren’t aware, sun-dried tomatoes, cheese, and kale really get along well. Beware- this combo is addicting.
+
+So, when I pondered what to eat, it shouldn’t come as a surprise that the answer included all three of these staples.
+
+Plus, I had a perfectly ripe avocado that was sitting on my counter just begging to be consumed.
+
+I opened my pantry to see what else might work in a wrap. I needed some substance, but nothing too overwhelming. I was already pretty covered on the flavor front, and didn’t want to risk overdoing it.
+
+That’s when I found my answer: quinoa.
+
+I love making a batch of quinoa and keeping the extras around for other uses in other meals. One of my favorite ways to use leftover quinoa? To make a fried rice-inspired stir-fry, tossing the quinoa with soy sauce, toasted sesame oil, and veggies.
+
+But let’s not get ahead of ourselves. Let’s focus on this wrap. Because it is simply deeee-lish.
+
+If you were looking for a jazzy new lunch idea, this is it! In fact, maybe you should just make a whole bunch of these right now and keep ’em in the fridge. Then, on your way out the door in the morning, you can just throw one in your bag for lunch. Voila! Hassle-free morning.
+
+You’re welcome.`,
+  yieldQuantity: '1 wrap',
+  ingredients: ['1 8-inch gf tortilla (I use Food for Life brand)', '4 slices fresh mozzarella cheese', '1 handful fresh parsley, chopped', '1 heaping Tbsp. chopped sun-dried tomatoes', '1/4 avocado, sliced', '1/4 c. cooked quinoa', '1 handful baby kale, or other greens', 'any other adornment you may wish to add (e.g. salt, pepper, crushed red pepper)'],
+  finalImage: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-11.jpg',
+  finalText: `Enjoy!`,
+  directions: [savoryQuinoaWrapDirections]
+})
+
+let posts = [blackBeanBurgerPost, savoryQuinoaWrapPost]
 
 Post.remove({})
   .then(() => {
