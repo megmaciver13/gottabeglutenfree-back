@@ -56,6 +56,7 @@ const PostSchema = new mongoose.Schema({
   date: { type: Date, default: Date.now },
   featuredImage: String,
   introText: String,
+  additionalImage: String,
   yieldQuantity: String,
   ingredients: [],
   finalImage: String,
@@ -67,6 +68,6 @@ const DirectionList = mongoose.model('DirectionList', DirectionListSchema)
 const Post = mongoose.model('Post', PostSchema)
 
 module.exports = {
-  DirectionList,
-  Post
+  DirectionList: DirectionList,
+  Post: Post
 }
