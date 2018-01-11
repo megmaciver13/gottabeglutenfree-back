@@ -1,42 +1,49 @@
 const Schema = require('./schema')
 
-const DirectionList = Schema.DirectionList
+const Direction = Schema.Direction
 const Post = Schema.Post
 
-let blackBeanBurgerDirections = new DirectionList({
-  stepOne: {
-    text: `Bread Crumbs: I decided to make my own using leftover cornbread that was in my freezer. Feel free to use any bread you have lying around! I thawed the bread and tore it apart (cornbread crumbles apart well), then spread it into a pan. Bake it for about 10-15 minutes, or until they are just beginning to get golden, at 350 degrees F. Once the bread pieces are baked and dried, crumble them apart into crumbs!`,
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-2.jpg'
-  },
-  stepTwo: {
-    text: `Burgers: First, mince the garlic cloves and finely chop the red onion.`,
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-3.jpg'
-  },
-  stepThree: {
-    text: `Drain and rinse the beans, then throw them into a bowl to toss with the chopped onion, minced garlic, cumin, and salt.`,
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-4.jpg'
-  },
-  stepFour: {
-    text: `Use fork to mash the mixture. (I like my bean burgers pureed, so I only coarsely mashed.)`,
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-5.jpg'
-  },
-  stepFive: {
-    text: `Add the corn, salsa, bread crumbs, and egg whites to the bean mixture.`,
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-6.jpg'
-  },
-  stepSix: {
-    text: `Then, mix it up and use your hands to form four burgers. Coat a skillet in oil and heat over medium heat. Cook for about 5 minutes on each side. Flip carefully! These guys are delicate.`,
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-7.jpg'
-  },
-  stepSeven: {
-    text: `Avocado sauce: Mash the avocado in a bowl. Mix in the lime juice, yogurt, and salt.`,
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-8.jpg'
-  },
-  stepEight: {
+let blackBeanBurgerStep1 = new Direction({
+  text: `Bread Crumbs: I decided to make my own using leftover cornbread that was in my freezer. Feel free to use any bread you have lying around! I thawed the bread and tore it apart (cornbread crumbles apart well), then spread it into a pan. Bake it for about 10-15 minutes, or until they are just beginning to get golden, at 350 degrees F. Once the bread pieces are baked and dried, crumble them apart into crumbs!`,
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-2.jpg'
+})
+
+let blackBeanBurgerStep2 = new Direction({
+  text: `Burgers: First, mince the garlic cloves and finely chop the red onion.`,
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-3.jpg'
+})
+
+let blackBeanBurgerStep3 = new Direction({
+  text: `Drain and rinse the beans, then throw them into a bowl to toss with the chopped onion, minced garlic, cumin, and salt.`,
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-4.jpg'
+})
+
+let blackBeanBurgerStep4 = new Direction({
+  text: `Use fork to mash the mixture. (I like my bean burgers pureed, so I only coarsely mashed.)`,
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-5.jpg'
+})
+
+let blackBeanBurgerStep5 = new Direction({
+  text: `Add the corn, salsa, bread crumbs, and egg whites to the bean mixture.`,
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-6.jpg'
+})
+
+let blackBeanBurgerStep6 = new Direction({
+  text: `Then, mix it up and use your hands to form four burgers. Coat a skillet in oil and heat over medium heat. Cook for about 5 minutes on each side. Flip carefully! These guys are delicate.`,
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-7.jpg'
+})
+
+let blackBeanBurgerStep7 = new Direction({
+  text: `Avocado sauce: Mash the avocado in a bowl. Mix in the lime juice, yogurt, and salt.`,
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-8.jpg'
+})
+
+let blackBeanBurgerStep8 = new Direction(
+  {
     text: `Plate the burger, and top with the avocado sauce and any other desired toppings.`,
     imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-10.jpg'
   }
-})
+)
 
 let blackBeanBurgerPost = new Post({
   title: 'Black Bean Burgers',
@@ -56,38 +63,42 @@ And it was such a nice day that I decided to make a picnic of it. My friends Sar
   ingredients: ['1 15-oz. can black beans', '1/4 red onion', '2 garlic cloves', '3/4 tsp. cumin', '1/4 tsp. salt', '3/4 c. corn (I thawed frozen corn)', '1/4 c. salsa (for me, Tostitos Restaurant Style all day errrry day)', '3/4 c. gf bread crumbs (you can use any bread lying around, see below)', '1 egg white', 'avocado sauce:', '1/2 avocado', '1/4 c. plain yogurt', '1/2 lime', 'salt', 'desired burger toppings (e.g. red onion, cilantro)'],
   finalImage: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-black-bean-burgers-12.jpg',
   finalText: `And off to the courtyard we went for our lovely meal! I didn’t have any buns so we ate the bean burgers in a tortilla. Thus, it was somewhat of a black bean burger burrito. How’s that for alliteration?`,
-  directions: [blackBeanBurgerDirections]
+  directions: [blackBeanBurgerStep1, blackBeanBurgerStep2, blackBeanBurgerStep3, blackBeanBurgerStep4, blackBeanBurgerStep5, blackBeanBurgerStep6, blackBeanBurgerStep7, blackBeanBurgerStep8]
 })
 
-let savoryQuinoaWrapDirections = new DirectionList({
-  stepOne: {
-    text: `First, if you haven’t cooked the quinoa yet, do so now. I made 1 cup of dry quinoa, so I could use the rest for meals throughout the week. Rinse 1 c. dry quinoa, then place in 2 c. water. Bring to a boil. Once boiling, turn the heat low, and place the top on the pan. Let it cook for 15 min. Once the quinoa is cooked, use a fork to fluff it up and separate the grains.`,
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-1.jpg'
-  },
-  stepTwo: {
-    text: 'Heat the tortilla on a skillet over low heat.',
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-2.jpg'
-  },
-  stepThree: {
-    text: 'Let it heat for about 30 seconds on one side, then turn it over and line with cheese. Let cook until cheese is melted.',
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-5.jpg'
-  },
-  stepFour: {
-    text: 'While the cheese is melting, chop up the parsley and sun-dried tomatoes.',
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-4.jpg'
-  },
-  stepFive: {
-    text: 'Once the cheese on the tortilla has melted, turn off the heat and pile on the sun-dried tomatoes and parsley.',
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-6.jpg'
-  },
-  stepSix: {
-    text: 'Line up the avocado slices.',
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-7.jpg'
-  },
-  stepSeven: {
-    text: `Then, spoon the warm quinoa onto the tortilla, and plop on a handful of greens. Roll it up carefully, as the tortilla is probably a little crispy from the skillet. Between that and the green, the wrap has a nice crunch to it!`,
-    imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-1.jpg'
-  }
+let savoryQuinoaWrapStep1 = new Direction({
+  text: `First, if you haven’t cooked the quinoa yet, do so now. I made 1 cup of dry quinoa, so I could use the rest for meals throughout the week. Rinse 1 c. dry quinoa, then place in 2 c. water. Bring to a boil. Once boiling, turn the heat low, and place the top on the pan. Let it cook for 15 min. Once the quinoa is cooked, use a fork to fluff it up and separate the grains.`,
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-1.jpg'
+})
+
+let savoryQuinoaWrapStep2 = new Direction({
+  text: 'Heat the tortilla on a skillet over low heat.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-2.jpg'
+})
+
+let savoryQuinoaWrapStep3 = new Direction({
+  text: 'Let it heat for about 30 seconds on one side, then turn it over and line with cheese. Let cook until cheese is melted.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-5.jpg'
+})
+
+let savoryQuinoaWrapStep4 = new Direction({
+  text: 'While the cheese is melting, chop up the parsley and sun-dried tomatoes.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-4.jpg'
+})
+
+let savoryQuinoaWrapStep5 = new Direction({
+  text: 'Once the cheese on the tortilla has melted, turn off the heat and pile on the sun-dried tomatoes and parsley.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-6.jpg'
+})
+
+let savoryQuinoaWrapStep6 = new Direction({
+  text: 'Line up the avocado slices.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-7.jpg'
+})
+
+let savoryQuinoaWrapStep7 = new Direction({
+  text: `Then, spoon the warm quinoa onto the tortilla, and plop on a handful of greens. Roll it up carefully, as the tortilla is probably a little crispy from the skillet. Between that and the green, the wrap has a nice crunch to it!`,
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-1.jpg'
 })
 
 let savoryQuinoaWrapPost = new Post({
@@ -117,7 +128,7 @@ You’re welcome.`,
   ingredients: ['1 8-inch gf tortilla (I use Food for Life brand)', '4 slices fresh mozzarella cheese', '1 handful fresh parsley, chopped', '1 heaping Tbsp. chopped sun-dried tomatoes', '1/4 avocado, sliced', '1/4 c. cooked quinoa', '1 handful baby kale, or other greens', 'any other adornment you may wish to add (e.g. salt, pepper, crushed red pepper)'],
   finalImage: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-quinoa-wrap-11.jpg',
   finalText: `Enjoy!`,
-  directions: [savoryQuinoaWrapDirections]
+  directions: [savoryQuinoaWrapStep1, savoryQuinoaWrapStep2, savoryQuinoaWrapStep3, savoryQuinoaWrapStep4, savoryQuinoaWrapStep5, savoryQuinoaWrapStep6, savoryQuinoaWrapStep7]
 })
 
 let posts = [blackBeanBurgerPost, savoryQuinoaWrapPost]
