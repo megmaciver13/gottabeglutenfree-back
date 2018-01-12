@@ -131,7 +131,91 @@ You’re welcome.`,
   directions: [savoryQuinoaWrapStep1, savoryQuinoaWrapStep2, savoryQuinoaWrapStep3, savoryQuinoaWrapStep4, savoryQuinoaWrapStep5, savoryQuinoaWrapStep6, savoryQuinoaWrapStep7]
 })
 
-let posts = [blackBeanBurgerPost, savoryQuinoaWrapPost]
+const fishTacoStep1 = new Direction({
+  text: 'Finely chop the cabbage into thin strands.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-3.jpg'
+})
+
+const fishTacoStep2 = new Direction({
+  text: 'Mix the lime juice, honey, onion, and jalapeño in a small bowl. In a large bowl, mix the contents of the small bowl into the cabbage. Stir the cilantro and salt into the cabbage. Let sit for at least 30 minutes.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-4.jpg'
+})
+
+const fishTacoStep3 = new Direction({
+  text: 'For the quick-pickled onions: Slice the onion and jalapeno.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-5.jpg'
+})
+
+const fishTacoStep4 = new Direction({
+  text: 'Add the red wine vinegar, sugar, salt, and water to a medium saucepan. Bring to a boil. Put the onion and jalapeño in, and reduce to a simmer. Cook for 5 minutes, then drain. Onions are ready!',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-6.jpg'
+})
+
+const fishTacoStep5 = new Direction({
+  text: 'For the sauce: Add all ingredients to a food processor.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-7.jpg'
+})
+
+const fishTacoStep6 = new Direction({
+  text: 'Blend ingredients. The sauce is ready!',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-8.jpg'
+})
+
+const fishTacoStep7 = new Direction({
+  text: `Pour oil into a heavy pan–enough to have at least one inch in the bottom of pan. (Use a heavy, fairly deep pan–like a Dutch oven or cast iron skillet. Heat oil on high heat (350 degrees if you have a thermometer).
+
+Cut the fish into pieces about one by one inch pieces.`,
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-9.jpg'
+})
+
+const fishTacoStep8 = new Direction({
+  text: 'In a medium mixing bowl, combine flour, salt, sugar, onion powder, and baking powder. Pour beer in, and whisk until blended.Dip fish pieces into batter to coat completely.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-11.jpg'
+})
+
+const fishTacoStep9 = new Direction({
+  text: 'Carefully lower into oil, and fry for 3-5 minutes.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-13.jpg'
+})
+
+const fishTacoStep10 = new Direction({
+  text: 'Remove using tongs, fork, or basket strainer tool. Place on a plate lined with several sheets of paper towel. Let cool at least 3 minutes.',
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-14.jpg'
+})
+
+const fishTacoStep11 = new Direction({
+  text: `Now, it’s time to assemble the tacos!!!! The moment you’ve been waiting for! Heat the tortillas over a gas burner on low heat for 30 seconds on each side. Then pile on the fish, slaw, sauce, and onions. Your tacos are ready!`,
+  imageUrl: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-16.jpg'
+})
+
+const fishTacoPost = new Post({
+  title: 'Fish Tacos',
+  date: new Date('2015-03-23T16:00:00Z'),
+  featuredImage: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-17.jpg',
+  introText: `Tom is usually quite wishy washy about food decisions.
+
+“Whatever you think.”
+
+“Chef’s mercy.”
+
+Or simply “I don’t know.”
+
+Last week, I approached him and told him he was in charge of deciding what I made next for the blog. Realizing he didn’t have a choice, but to actually make a decision about food in the kitchen, he hesitated for only a moment before offering up, “fish tacos?” It seemed very specific for someone who claims to have no inspiration when it comes to the culinary arts. But it was the perfect suggestion. Just “Meg” enough (tacos…hello!!), and just out of my comfort zone enough (I never make fish at home).
+
+I went to the interwebs for lots of inspiration. I knew a slaw would be key for some zest and crunch. And I knew I wanted some sort of yogurt sauce. Because sauce. YUM.
+
+It was rather an adventure.
+
+And that’s the wonderful thing about cooking escapades like tacos and slaws and sauces. There is so much room for creativity. Sometimes precision is fun. That’s when you bake a soufflé. Sometimes, crazy messiness is fun. That’s when you make tacos 🙂`,
+  additionalImage: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-2.jpg',
+  yieldQuantity: '12 small tacos',
+  ingredients: ['Ingredients for Slaw:', '1/2 head of cabbage', '2 tsp. lime juice', '2 tsp. honey', '2 Tbsp. red onion', '3 tsp. minced jalapeño', '2 tsp. chopped cilantro', '1/4 tsp. salt', 'Ingredients for Quick-Pickled Onions:', '1/4 c. red wine vinegar', '2 Tbsp. sugar', '1 tsp. salt', '1 1/2 c. water', '1/2 red onion, sliced', '1 jalapeño, sliced in half and seeded', 'Ingredients for Sauce:', '1 c. plain Greek yogurt', '1/2 c. packed cilantro leaves', '3 cloves garlic', `1 jalapeño`, 'juice from one lime', '2-4 Tbsp. olive oil', '12 corn tortillas', '1 lb. cod', '1 c. gf flour', '2 tsp. salt', '1 tsp. sugar', '1/8 tsp. onion powder', '1 tsp. baking powder', '1 c. gf beer'],
+  finalImage: 'https://s3.us-east-2.amazonaws.com/gottabeglutenfree/gbgf-fish-tacos-18.jpg',
+  finalText: 'Enjoy! And while you’re cooking with it, may as well crack a few brewskis.',
+  directions: [fishTacoStep1, fishTacoStep2, fishTacoStep3, fishTacoStep4, fishTacoStep5, fishTacoStep6, fishTacoStep7, fishTacoStep8, fishTacoStep9, fishTacoStep10, fishTacoStep11]
+})
+
+let posts = [blackBeanBurgerPost, savoryQuinoaWrapPost, fishTacoPost]
 
 Post.remove({})
   .then(() => {
