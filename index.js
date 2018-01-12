@@ -58,4 +58,4 @@ app.get('/posts/:title', (req, res) => {
     .catch(err => console.log(err))
 })
 
-app.listen('port', process.env.PORT || 3001)
+app.listen(process.env.PORT || 3001)
